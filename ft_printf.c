@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 12:20:40 by tochaves          #+#    #+#             */
-/*   Updated: 2026/04/29 17:12:51 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/04/30 16:01:46 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	specifier_format(char specifier, va_list *args)
 	else if (specifier == 'i')
 		count += print_number(va_arg(*args, int));
 	else if (specifier == 'u')
-		count += print_number(va_arg(*args, unsigned int));
+		count += print_unsigned(va_arg(*args, unsigned int));
 	else if (specifier == 'x')
 		count += print_hex(va_arg(*args, unsigned int), 0);
 	else if (specifier == 'X')
@@ -65,7 +65,8 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-/* int	main(void)
+/* #include <stdio.h>
+int	main(void)
 {
 	ft_printf("%c\n", 'A');
 	ft_printf("%s\n", "hello");

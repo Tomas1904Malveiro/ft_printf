@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:07:42 by tochaves          #+#    #+#             */
-/*   Updated: 2026/04/29 14:21:56 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/04/30 16:14:57 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,24 @@ static int	print_hex_pointer(uintptr_t nbr)
 	len++;
 	return (len);
 }
+
 int	print_pointer(void *p)
 {
 	int			len;
 	uintptr_t	nbr;
 
 	len = 0;
+	if (!p)
+	{
+		write(1, "(nil)", 5);
+		return (5);
+	}
 	nbr = (uintptr_t)p;
 	len += write(1, "0x", 2);
 	len += print_hex_pointer(nbr);
 	return (len);
 }
+/* int main()
+{
+	print_pointer("ola");
+} */

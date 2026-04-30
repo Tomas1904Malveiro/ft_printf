@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:51:29 by tochaves          #+#    #+#             */
-/*   Updated: 2026/04/29 11:32:25 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/04/30 16:12:33 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,7 @@ int	print_number(int n)
 	len++;
 	return (len);
 }
+/* int main()
+{
+	print_number(42);
+} */

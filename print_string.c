@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:26:57 by tochaves          #+#    #+#             */
-/*   Updated: 2026/04/28 17:47:09 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/04/30 16:15:37 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,7 @@ int	print_string(char *str)
 	}
 	return (i);
 }
+/* int main()
+{
+	print_string("ola");
+} */

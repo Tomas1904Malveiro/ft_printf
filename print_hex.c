@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 11:33:33 by tochaves          #+#    #+#             */
-/*   Updated: 2026/04/29 13:00:57 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/04/30 16:11:26 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,7 @@ int	print_hex(unsigned int n, int uppercase)
 	}
 	return (len);
 }
+/* int main()
+{
+	print_hex(255, 1);
+} */

@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:25:18 by tochaves          #+#    #+#             */
-/*   Updated: 2026/04/28 17:30:00 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/04/30 16:12:00 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,3 +17,7 @@ int	print_char(char c)
 	write(1, &c, 1);
 	return (1);
 }
+/* int main()
+{
+	print_char('a');
+} */

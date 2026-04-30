@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   print_unsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 12:20:45 by tochaves          #+#    #+#             */
-/*   Updated: 2026/04/30 15:17:59 by tochaves         ###   ########.fr       */
+/*   Created: 2026/04/30 15:17:30 by tochaves          #+#    #+#             */
+/*   Updated: 2026/04/30 16:16:19 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <unistd.h>
+int	print_unsigned(unsigned int n)
+{
+	int	len;
 
-int	ft_printf(const char *format, ...);
-int	print_char(char c);
-int	print_string(char *str);
-int	print_number(int n);
-int	print_unsigned(unsigned int n);
-int	print_hex(unsigned int n, int uppercase);
-int	print_pointer(void *p);
-
-#endif
+	len = 0;
+	if (n >= 10)
+	{
+		len += print_unsigned(n / 10);
+	}
+	write(1, &"0123456789"[n % 10], 1);
+	len++;
+	return (len);
+}
+/* int main()
+{
+	print_unsigned(-42);
+} */
